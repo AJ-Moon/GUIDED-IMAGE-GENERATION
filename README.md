@@ -1,75 +1,77 @@
-# ✈️ Predicting Air Crash Severity
+# 🎨 Guided Generation & Control in Pretrained Diffusion Models
 
-This project explores the use of machine learning models to predict the **severity of air crashes** based on a range of features such as fatalities, aircraft type, flight phase, and more. By analyzing historical crash data, the model aims to classify incidents as either **severe** or **non-severe**, assisting in understanding critical risk factors and potentially improving aviation safety analytics.
+This repository contains a project that demonstrates the use of **pretrained Stable Diffusion models** for **text-to-image generation**, **prompt control**, **inpainting**, and **style transfer** using the HuggingFace `diffusers` library.
 
----
-
-## 📚 Project Overview
-
-- **Goal**: Classify air crashes into severity levels.
-- **Dataset**: A cleaned and preprocessed version of publicly available aviation accident data.
-- **Approach**:
-  - Data preprocessing and exploration.
-  - Feature selection and encoding.
-  - Model implementation and evaluation.
-- **Tools Used**: Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn (if applicable), etc.
+🧑‍🎓 **Name:** Muhammad Ahmad  
+🆔 **Roll Number:** 26100398  
+📁 **Part:** PA5 – Part 2 (Diffusion Models)
 
 ---
 
-## 🗂️ Repository Contents
+## 🚀 Objectives
 
-| File | Description |
-|------|-------------|
-| `26100398_PA5_2.ipynb` | Main Jupyter notebook containing the full workflow |
-| `README.md` | Project documentation |
-| `data/` (optional) | Contains dataset files, if not included in notebook |
-| `requirements.txt` (optional) | Python dependencies for running the project |
-
----
-
-## 📊 Dataset Description
-
-The dataset includes the following types of features:
-- **Crash Details**: Date, location, time, etc.
-- **Aircraft Info**: Type, operator, etc.
-- **Casualties**: Number of fatalities, injuries, survivors.
-- **Other Variables**: Flight phase, purpose, etc.
-- **Target Variable**: Binary class label (`Severe`, `Non-Severe`)
+- Generate images from text using Stable Diffusion
+- Explore **classifier-free guidance scale** effects
+- Perform **inpainting** on masked images
+- Use **ControlNet** and **Canny edges** to guide generation
+- Apply **Style Transfer** using reference images
 
 ---
 
-## 🔍 Exploratory Data Analysis
+## 📦 Libraries & Setup
 
-Key EDA tasks performed:
-- Visualization of severity class imbalance
-- Distribution plots of fatalities and survivors
-- Correlation heatmaps for numerical features
-- Outlier detection and handling of missing data
+The following libraries are used in this notebook:
 
----
+- `diffusers`
+- `transformers`
+- `accelerate`
+- `safetensors`
+- `xformers`
+- `controlnet_aux`
 
-## 🧠 Machine Learning Models
+Install with:
 
-Multiple machine learning models are trained and evaluated, such as:
+```bash
+pip install --upgrade diffusers transformers accelerate safetensors xformers controlnet_aux
 
-- **Logistic Regression**
-- **Decision Trees**
-- **Random Forest**
-- *(Add more if included: SVM, Naive Bayes, Neural Network)*
+🖼️ Key Features & Sections
+1. Text-to-Image Generation
+Uses StableDiffusionPipeline to generate images based on simple text prompts.
 
-### 📏 Evaluation Metrics:
-- Accuracy
-- Precision & Recall
-- F1-Score
-- Confusion Matrix
-- ROC Curve (if used)
+2. Guidance Scale Experimentation
+Varying the guidance_scale (5.0, 7.5, 10.0, etc.) to observe how it impacts image fidelity and prompt adherence.
 
----
+3. Inpainting
+Using StableDiffusionInpaintPipeline to modify specific regions in an image based on a text prompt and a mask.
 
-## 🚀 How to Run the Project
+4. ControlNet with Canny Edges
+Guiding the generation with ControlNet + Canny edge detection for structure-aware synthesis.
 
-1. Clone the repository:
+5. Style Transfer
+Conditioning generation using both a text prompt and a reference style image, leveraging multi-modal inputs.
 
-   ```bash
-   git clone https://github.com/yourusername/air-crash-severity-prediction.git
-   cd air-crash-severity-prediction
+📂 Output Samples
+Each section in the notebook produces visual outputs. Example results include:
+
+Text-guided generated images
+
+Same prompt with varying guidance scales
+
+Inpainted images using masks
+
+ControlNet results conditioned on edge maps
+
+Style transfer outputs blending text intent and image style
+
+▶️ How to Use
+Clone the repository or download the notebook:
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/diffusion-guided-generation.git
+Open the notebook in Jupyter or Colab:
+
+Colab recommended (for GPU)
+
+Run all cells sequentially to install dependencies, load models, and generate images.
