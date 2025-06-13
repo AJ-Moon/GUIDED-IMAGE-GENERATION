@@ -2,11 +2,7 @@
 
 This repository contains a project that demonstrates the use of **pretrained Stable Diffusion models** for **text-to-image generation**, **prompt control**, **inpainting**, and **style transfer** using the HuggingFace `diffusers` library.
 
-🧑‍🎓 **Name:** Muhammad Ahmad  
-🆔 **Roll Number:** 26100398  
-📁 **Part:** PA5 – Part 2 (Diffusion Models)
 
----
 
 ## 🚀 Objectives
 
