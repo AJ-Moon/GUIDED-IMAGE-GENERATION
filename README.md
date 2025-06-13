@@ -18,22 +18,6 @@ This repository contains a project that demonstrates the use of **pretrained Sta
 
 ---
 
-## 📦 Libraries & Setup
-
-The following libraries are used in this notebook:
-
-- `diffusers`
-- `transformers`
-- `accelerate`
-- `safetensors`
-- `xformers`
-- `controlnet_aux`
-
-Install with:
-
-```bash
-pip install --upgrade diffusers transformers accelerate safetensors xformers controlnet_aux
-
 🖼️ Key Features & Sections
 1. Text-to-Image Generation
 Uses StableDiffusionPipeline to generate images based on simple text prompts.
@@ -75,3 +59,22 @@ Open the notebook in Jupyter or Colab:
 Colab recommended (for GPU)
 
 Run all cells sequentially to install dependencies, load models, and generate images.
+
+
+## 📦 Libraries & Setup
+
+The following libraries are used in this notebook:
+
+- `diffusers`
+- `transformers`
+- `accelerate`
+- `safetensors`
+- `xformers`
+- `controlnet_aux`
+
+Install with:
+
+```bash
+pip install --upgrade diffusers transformers accelerate safetensors xformers controlnet_aux
+
+
